@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/i_dont_want_to_go_on.ogg-db18288ae0023d61503c17aff19041e3.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/i_dont_want_to_go_on.ogg"
+dest_files=[ "res://.import/i_dont_want_to_go_on.ogg-db18288ae0023d61503c17aff19041e3.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

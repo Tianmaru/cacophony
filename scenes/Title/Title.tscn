@@ -1,0 +1,460 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://transparent_2.png" type="Texture" id=1]
+[ext_resource path="res://light.png" type="Texture" id=2]
+[ext_resource path="res://white.png" type="Texture" id=3]
+[ext_resource path="res://fonts/NormalData.tres" type="DynamicFontData" id=4]
+[ext_resource path="res://scenes/Title/Title.gd" type="Script" id=5]
+[ext_resource path="res://scenes/MyPopup/MyPopup.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/SettingsPopup/SettingsPopup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://audio/ambient/cave themeb4.ogg" type="AudioStream" id=8]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 512, 300 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2D2:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Light2D3:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("White:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.239216, 0.239216, 0.239216, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "dolly"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 512, 300 ), Vector2( 580, 300 ), Vector2( 512, 300 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light2D:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.8, 2.0, 0.8 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2D2:energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.8, 2.0, 0.8 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Light2D3:energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.8, 2.0, 0.8 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("White:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.239216, 0.239216, 0.239216, 1 ), Color( 0.12549, 0.12549, 0.12549, 1 ), Color( 0.239216, 0.239216, 0.239216, 1 ) ]
+}
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.872928, 0.994475, 1 )
+colors = PoolColorArray( 0.768627, 0.768627, 0.768627, 1, 1, 1, 1, 1, 0.737428, 0.737428, 0.737428, 0.259669, 0.996078, 0.996078, 0.996078, 0 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 72
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Title" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="White" type="Sprite" parent="."]
+modulate = Color( 0.239216, 0.239216, 0.239216, 1 )
+scale = Vector2( 1024, 600 )
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MistParticles" type="CPUParticles2D" parent="."]
+position = Vector2( 512, 700 )
+amount = 64
+lifetime = 10.0
+preprocess = 10.0
+emission_shape = 2
+emission_rect_extents = Vector2( 512, 1 )
+direction = Vector2( 0, -1 )
+gravity = Vector2( 0, 0 )
+initial_velocity = 100.0
+scale_amount = 100.0
+scale_amount_random = 0.8
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="White2" type="Sprite" parent="."]
+position = Vector2( 430, 383 )
+rotation = 0.600719
+scale = Vector2( 339.99, -368.239 )
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Face" type="Sprite" parent="."]
+position = Vector2( 1024, 600 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -630, -500 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+rotating = true
+current = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "dolly"
+playback_speed = 0.5
+anims/RESET = SubResource( 1 )
+anims/dolly = SubResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 267, 460 )
+rotation = 2.92387
+scale = Vector2( 0.230824, -0.186228 )
+texture = ExtResource( 2 )
+texture_scale = 1.42
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( 289, 66 )
+rotation = -2.80648
+scale = Vector2( 0.250698, -0.136876 )
+texture = ExtResource( 2 )
+texture_scale = 1.42
+
+[node name="Light2D3" type="Light2D" parent="."]
+position = Vector2( 288, 137 )
+rotation = -2.87157
+scale = Vector2( 0.338878, -0.132021 )
+texture = ExtResource( 2 )
+texture_scale = 1.42
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 727, 262 )
+amount = 32
+lifetime = 2.0
+preprocess = 2.0
+randomness = 0.2
+emission_shape = 1
+emission_sphere_radius = 40.0
+gravity = Vector2( 0, -30 )
+angular_velocity = 10.0
+angular_velocity_random = 0.5
+radial_accel = 20.0
+radial_accel_random = 0.5
+tangential_accel = 50.0
+scale_amount = 5.0
+color_ramp = SubResource( 4 )
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2( 546, 401 )
+amount = 32
+lifetime = 2.0
+preprocess = 2.0
+randomness = 0.2
+emission_shape = 1
+emission_sphere_radius = 40.0
+gravity = Vector2( 0, -30 )
+angular_velocity = 10.0
+angular_velocity_random = 0.5
+radial_accel = 20.0
+radial_accel_random = 0.5
+tangential_accel = 50.0
+scale_amount = 5.0
+color_ramp = SubResource( 4 )
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+position = Vector2( 604, 178 )
+amount = 32
+lifetime = 2.0
+preprocess = 2.0
+randomness = 0.2
+emission_shape = 1
+emission_sphere_radius = 30.0
+gravity = Vector2( 0, -30 )
+angular_velocity = 10.0
+angular_velocity_random = 0.5
+radial_accel = 20.0
+radial_accel_random = 0.5
+tangential_accel = 50.0
+scale_amount = 5.0
+color_ramp = SubResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchor_left = 0.03125
+anchor_top = 0.0533333
+anchor_right = 0.410156
+anchor_bottom = 0.566667
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/VBoxContainer"]
+margin_right = 387.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 5 )
+text = "Cacophony"
+align = 1
+valign = 1
+
+[node name="Subtitle" type="Label" parent="CanvasLayer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 387.0
+margin_bottom = 137.0
+custom_fonts/font = SubResource( 3 )
+text = "An Audio-Only Horror Game"
+align = 1
+valign = 1
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 141.0
+margin_right = 387.0
+margin_bottom = 208.0
+text = "Play"
+
+[node name="HowToButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 212.0
+margin_right = 387.0
+margin_bottom = 279.0
+text = "How To Play"
+
+[node name="SettingsButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 283.0
+margin_right = 387.0
+margin_bottom = 350.0
+text = "Settings"
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 354.0
+margin_right = 387.0
+margin_bottom = 421.0
+text = "Credits"
+
+[node name="PlayPopup" parent="CanvasLayer" instance=ExtResource( 6 )]
+anchor_left = 0.4
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+title = "Select Difficulty"
+text = "[u]Easy[/u]
+If years of exposure to heavy metal music made your eardrum resistant to noises below 100dB, try this option: The map has only a few rooms and there is no monster.
+
+[u]Normal[/u]
+The map is slightly bigger and a monster will start chasing you.
+
+[u]Hard[/u]
+You can hear like a cat and are blessed with perfect pitch? Test your audio perception on a big map, while multiple monsters chase you."
+buttons = [ "Easy", "Normal", "Hard" ]
+confirmation_button = "Got it!"
+
+[node name="HowToPlayPopup" parent="CanvasLayer" instance=ExtResource( 6 )]
+anchor_left = 0.4
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+title = "How To Play"
+text = "Try to avoid the monster and find the exit of the labyrinth through navigating by ear. There are multiple auditory clues scattered across the level to indicate your current location. You can also call for help - maybe someone will answer?
+
+- W to move forward one grid cell
+- A to turn 90° to the left
+- D to turn 90° to the right
+- Space to call for help
+- [s]F3 to unblock the vision[/s]
+
+Have fun!"
+buttons = [ "Got it!" ]
+confirmation_button = "Got it!"
+
+[node name="CreditsPopup" parent="CanvasLayer" instance=ExtResource( 6 )]
+anchor_left = 0.4
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+title = "Credits"
+text = "A Game by Tianmaru, made with [url=godotengine.org]Godot 3[/url].
+Originally created for [url=https://itch.io/jam/trijam-167]Trijam #167: Heightened Senses[/url].
+
+Cacophony uses the following assets:
+- [url]fonts.google.com/specimen/Amatic+SC[/url]
+- [url]https://opengameart.org/content/cave-theme[/url]
+- [url]opengameart.org/content/trembling-mists[/url]
+- [url]opengameart.org/content/loopable-dungeon-ambience[/url]
+- [url]opengameart.org/content/dripping-water-loop[/url]
+- [url=opengameart.org/content/foot-walking-step-sounds-on-stone-water-snow-wood-and-dirt]Step Sounds from OpenGameArt.org[/url]
+- [url]freesound.org/people/Abacagi/sounds/483397/[/url]
+- [url]opengameart.org/content/falling-rock[/url]"
+
+[node name="SettingsPopup" parent="CanvasLayer" instance=ExtResource( 7 )]
+visible = true
+anchor_left = 0.4
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+bus = "Music"
+
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/HowToButton" to="." method="_on_HowToButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/SettingsButton" to="." method="_on_SettingsButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_button_up"]

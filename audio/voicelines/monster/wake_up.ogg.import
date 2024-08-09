@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wake_up.ogg-c3049f91f12e0cd1146726add9b82454.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/wake_up.ogg"
+dest_files=[ "res://.import/wake_up.ogg-c3049f91f12e0cd1146726add9b82454.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

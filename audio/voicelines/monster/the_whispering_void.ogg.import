@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/the_whispering_void.ogg-0c7a63b2a2bfb99c61cbc667222219ac.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/the_whispering_void.ogg"
+dest_files=[ "res://.import/the_whispering_void.ogg-0c7a63b2a2bfb99c61cbc667222219ac.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/its_pointless.ogg-3c4b22597a3772067cc744bd9f7a7d30.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/its_pointless.ogg"
+dest_files=[ "res://.import/its_pointless.ogg-3c4b22597a3772067cc744bd9f7a7d30.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

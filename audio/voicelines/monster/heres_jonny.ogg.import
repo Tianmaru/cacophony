@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/heres_jonny.ogg-289e05f97c06b09f213b0b460dfd0f78.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/heres_jonny.ogg"
+dest_files=[ "res://.import/heres_jonny.ogg-289e05f97c06b09f213b0b460dfd0f78.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

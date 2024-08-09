@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/shut_up.ogg-d6c660f1b240fe36efd6f66ce50bb1f8.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/shut_up.ogg"
+dest_files=[ "res://.import/shut_up.ogg-d6c660f1b240fe36efd6f66ce50bb1f8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

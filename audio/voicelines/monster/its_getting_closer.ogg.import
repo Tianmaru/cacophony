@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/its_getting_closer.ogg-35d70966975ff600892d5d8a0e5bc746.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/its_getting_closer.ogg"
+dest_files=[ "res://.import/its_getting_closer.ogg-35d70966975ff600892d5d8a0e5bc746.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

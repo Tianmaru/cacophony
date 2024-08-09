@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/answer_over_here.ogg-f6453bf5d9cbeda169a43a5d17b1ccd1.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/goal/answer_over_here.ogg"
+dest_files=[ "res://.import/answer_over_here.ogg-f6453bf5d9cbeda169a43a5d17b1ccd1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

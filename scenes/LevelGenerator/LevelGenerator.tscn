@@ -1,0 +1,180 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://scenes/MeshLibrary/MeshLibrary.tres" type="MeshLibrary" id=1]
+[ext_resource path="res://scenes/Monster/Monster.gd" type="Script" id=2]
+[ext_resource path="res://audio/clues/bat_swarm.ogg" type="AudioStream" id=3]
+[ext_resource path="res://scenes/Player/Player.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Monster/Monster.tscn" type="PackedScene" id=5]
+[ext_resource path="res://audio/clues/water_dripping.ogg" type="AudioStream" id=6]
+[ext_resource path="res://scenes/LevelGenerator/LevelGenerator.gd" type="Script" id=7]
+[ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://audio/sfx/steps/stepdirt_1.ogg" type="AudioStream" id=9]
+[ext_resource path="res://audio/sfx/steps/stepdirt_5.ogg" type="AudioStream" id=10]
+[ext_resource path="res://audio/sfx/steps/stepdirt_4.ogg" type="AudioStream" id=11]
+[ext_resource path="res://audio/clues/crackling.ogg" type="AudioStream" id=12]
+[ext_resource path="res://audio/clues/rock.ogg" type="AudioStream" id=13]
+[ext_resource path="res://audio/sfx/steps/stepdirt_2.ogg" type="AudioStream" id=14]
+[ext_resource path="res://audio/sfx/steps/stepdirt_8.ogg" type="AudioStream" id=15]
+[ext_resource path="res://audio/sfx/steps/stepdirt_3.ogg" type="AudioStream" id=16]
+[ext_resource path="res://scenes/Goal/Goal.tscn" type="PackedScene" id=17]
+[ext_resource path="res://audio/sfx/steps/stepdirt_6.ogg" type="AudioStream" id=18]
+[ext_resource path="res://audio/sfx/steps/stepdirt_7.ogg" type="AudioStream" id=19]
+[ext_resource path="res://scenes/Goal/Goal.gd" type="Script" id=20]
+[ext_resource path="res://audio/ambient/dungeon_ambient_1.ogg" type="AudioStream" id=21]
+[ext_resource path="res://audio/voicelines/goal/answer_can_you_hear_me.ogg" type="AudioStream" id=22]
+[ext_resource path="res://audio/voicelines/goal/answer_hello2.ogg" type="AudioStream" id=23]
+[ext_resource path="res://audio/voicelines/goal/answer_over_here.ogg" type="AudioStream" id=24]
+[ext_resource path="res://audio/voicelines/goal/answer_hello.ogg" type="AudioStream" id=25]
+[ext_resource path="res://audio/voicelines/goal/answer_watch_out.ogg" type="AudioStream" id=26]
+[ext_resource path="res://audio/voicelines/goal/answer_hurry.ogg" type="AudioStream" id=27]
+[ext_resource path="res://audio/voicelines/goal/answer_i_am_here.ogg" type="AudioStream" id=28]
+[ext_resource path="res://audio/voicelines/player/ask_is_anybody_there.ogg" type="AudioStream" id=29]
+[ext_resource path="res://audio/voicelines/player/ask_give_me_a_sign.ogg" type="AudioStream" id=30]
+[ext_resource path="res://audio/voicelines/player/ask_i_need_help.ogg" type="AudioStream" id=31]
+[ext_resource path="res://audio/voicelines/player/ask_where_are_you.ogg" type="AudioStream" id=32]
+[ext_resource path="res://audio/voicelines/player/ask_hello.ogg" type="AudioStream" id=33]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2.5, 1, 2.5 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 1, 1.5 )
+
+[sub_resource type="BoxShape" id=3]
+
+[node name="LevelGenerator" type="Spatial"]
+script = ExtResource( 7 )
+map_size = 12
+max_room_size = 4
+audio_clues = [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 13 ) ]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 1, 1, 1 )
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PoolIntArray( 0, 0, 1, 1, 0, 1, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 65535, 0, 0, 0, 1, 1, 1, 1, 1, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 65535, 1, 0, 0, 2, 1, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 8, 2, 0, 9, 2, 0, 10, 2, 0, 11, 2, 0, 12, 2, 0, 65535, 2, 0, 0, 3, 1, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 11, 3, 0, 12, 3, 0, 65535, 3, 0, 0, 4, 1, 1, 4, 1, 2, 4, 0, 3, 4, 0, 4, 4, 1, 5, 4, 1, 6, 4, 1, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 65535, 4, 0, 0, 5, 1, 1, 5, 1, 2, 5, 1, 3, 5, 1, 4, 5, 1, 5, 5, 1, 6, 5, 1, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 65535, 5, 0, 0, 6, 1, 1, 6, 1, 2, 6, 0, 3, 6, 0, 4, 6, 1, 5, 6, 1, 6, 6, 1, 7, 6, 1, 8, 6, 1, 9, 6, 0, 10, 6, 0, 11, 6, 0, 12, 6, 0, 65535, 6, 0, 0, 7, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 1, 6, 7, 1, 7, 7, 1, 8, 7, 1, 9, 7, 1, 10, 7, 1, 11, 7, 1, 12, 7, 0, 65535, 7, 0, 0, 8, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 8, 1, 6, 8, 1, 7, 8, 1, 8, 8, 1, 9, 8, 0, 10, 8, 0, 11, 8, 1, 12, 8, 0, 65535, 8, 0, 0, 9, 0, 1, 9, 0, 2, 9, 0, 3, 9, 0, 4, 9, 0, 5, 9, 1, 6, 9, 0, 7, 9, 0, 8, 9, 0, 9, 9, 0, 10, 9, 0, 11, 9, 1, 12, 9, 0, 65535, 9, 0, 0, 10, 0, 1, 10, 0, 2, 10, 0, 3, 10, 0, 4, 10, 0, 5, 10, 1, 6, 10, 0, 7, 10, 0, 8, 10, 0, 9, 10, 0, 10, 10, 0, 11, 10, 1, 12, 10, 0, 65535, 10, 0, 0, 11, 0, 1, 11, 0, 2, 11, 0, 3, 11, 0, 4, 11, 0, 5, 11, 1, 6, 11, 1, 7, 11, 1, 8, 11, 1, 9, 11, 1, 10, 11, 1, 11, 11, 1, 12, 11, 0, 65535, 11, 0, 0, 12, 0, 1, 12, 0, 2, 12, 0, 3, 12, 0, 4, 12, 0, 5, 12, 0, 6, 12, 0, 7, 12, 0, 8, 12, 0, 9, 12, 0, 10, 12, 0, 11, 12, 0, 12, 12, 0, 65535, 12, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 4, 65535, 0, 5, 65535, 0, 6, 65535, 0, 7, 65535, 0, 8, 65535, 0, 9, 65535, 0, 10, 65535, 0, 11, 65535, 0, 12, 65535, 0, 65535, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_description_": ""
+}
+
+[node name="Entities" type="Spatial" parent="."]
+
+[node name="Player2" type="KinematicBody" parent="Entities" groups=["player"] instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+collision_layer = 2
+script = ExtResource( 4 )
+step_sounds = [ ExtResource( 9 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 15 ) ]
+call_sounds = [ ExtResource( 30 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 31 ), ExtResource( 32 ) ]
+
+[node name="Goal2" type="Area" parent="Entities" groups=["goal"] instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6 )
+collision_layer = 8
+collision_mask = 2
+script = ExtResource( 20 )
+audio_streams = [ ExtResource( 25 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 22 ) ]
+
+[node name="Monster2" type="Area" parent="Entities" groups=["monster"] instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1 )
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="Audio" type="Spatial" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 9 )
+stream = ExtResource( 21 )
+autoplay = true
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5 )
+stream = ExtResource( 21 )
+autoplay = true
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 7 )
+stream = ExtResource( 21 )
+autoplay = true
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D7" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+stream = ExtResource( 21 )
+autoplay = true
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D10" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5 )
+stream = ExtResource( 21 )
+autoplay = true
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D11" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+stream = ExtResource( 21 )
+autoplay = true
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D13" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6 )
+stream = ExtResource( 3 )
+autoplay = true
+max_distance = 3.0
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D17" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4 )
+stream = ExtResource( 12 )
+autoplay = true
+max_distance = 3.0
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D18" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+stream = ExtResource( 6 )
+autoplay = true
+max_distance = 3.0
+bus = "SFX"
+
+[node name="AudioStreamPlayer3D19" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
+stream = ExtResource( 13 )
+autoplay = true
+max_distance = 3.0
+bus = "SFX"
+
+[node name="Rooms" type="Spatial" parent="."]
+
+[node name="Area2" type="Area" parent="Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6 )
+reverb_bus_enable = true
+reverb_bus_name = "Cave"
+
+[node name="CollisionShape" type="CollisionShape" parent="Rooms/Area2"]
+shape = SubResource( 1 )
+
+[node name="Area5" type="Area" parent="Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 5 )
+reverb_bus_enable = true
+reverb_bus_name = "Cave"
+
+[node name="CollisionShape" type="CollisionShape" parent="Rooms/Area5"]
+shape = SubResource( 2 )
+
+[node name="Area6" type="Area" parent="Rooms"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5 )
+reverb_bus_enable = true
+reverb_bus_name = "Cave"
+
+[node name="CollisionShape" type="CollisionShape" parent="Rooms/Area6"]
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Entities/Goal2" to="Entities/Goal2" method="_on_Goal_body_entered"]
+[connection signal="body_entered" from="Entities/Monster2" to="Entities/Monster2" method="_on_Monster_body_entered"]

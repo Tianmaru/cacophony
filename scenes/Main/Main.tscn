@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/LevelGenerator/LevelGenerator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://audio/ambient/tremblingmists.ogg" type="AudioStream" id=2]
+[ext_resource path="res://scenes/Main/Main.gd" type="Script" id=3]
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="LevelGenerator" parent="." instance=ExtResource( 1 )]
+map_size = 50
+n_rooms = 7
+p_room = 0.4
+max_room_size = 7
+STEPS = 500
+n_monsters = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+bus = "Music"
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 10, 20, 10 )

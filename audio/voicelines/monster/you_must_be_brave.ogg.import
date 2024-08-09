@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/you_must_be_brave.ogg-97b477b4bdaf8f8924a01f82b4bda6ba.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/you_must_be_brave.ogg"
+dest_files=[ "res://.import/you_must_be_brave.ogg-97b477b4bdaf8f8924a01f82b4bda6ba.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

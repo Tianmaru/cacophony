@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/it_hurts.ogg-f7af909cd480cc364fc1fd351a1bc744.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/it_hurts.ogg"
+dest_files=[ "res://.import/it_hurts.ogg-f7af909cd480cc364fc1fd351a1bc744.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

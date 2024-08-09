@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/water.ogg-e5a64c4e81829ca8a31eee27421c0ab0.oggstr"
+
+[deps]
+
+source_file="res://audio/sfx/water.ogg"
+dest_files=[ "res://.import/water.ogg-e5a64c4e81829ca8a31eee27421c0ab0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

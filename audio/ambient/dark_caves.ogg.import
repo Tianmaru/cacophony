@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dark_caves.ogg-1d9c1ac8c7f9af2f38730a805a681ddd.oggstr"
+
+[deps]
+
+source_file="res://audio/ambient/dark_caves.ogg"
+dest_files=[ "res://.import/dark_caves.ogg-1d9c1ac8c7f9af2f38730a805a681ddd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

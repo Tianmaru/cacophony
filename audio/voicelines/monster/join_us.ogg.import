@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/join_us.ogg-5558e8a844baafbd08fd4947e1fc5dae.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/join_us.ogg"
+dest_files=[ "res://.import/join_us.ogg-5558e8a844baafbd08fd4947e1fc5dae.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

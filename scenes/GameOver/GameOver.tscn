@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://audio/voicelines/monster/join_us.ogg" type="AudioStream" id=1]
+[ext_resource path="res://scenes/GameOver/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://fonts/NormalData.tres" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 64.0
+margin_right = -16.0
+margin_bottom = -64.0
+alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="VBoxContainer"]
+margin_right = 992.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER"
+align = 1
+
+[node name="QuoteLabel" type="Label" parent="VBoxContainer"]
+margin_top = 142.0
+margin_right = 992.0
+margin_bottom = 355.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 3 )
+text = "\"But in my head, thousands and thousands of voices screamed in agony, each trying to drown the others, demanding my attention. Surprised, I found myself screaming among them, but I could not hear, which words were actually mine. My eyes went black and my own thoughts fell silent.\""
+align = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 405.0
+margin_right = 992.0
+margin_bottom = 472.0
+alignment = 1
+
+[node name="MenuButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 132.0
+margin_right = 361.0
+margin_bottom = 67.0
+size_flags_horizontal = 6
+text = "Return to Menu"
+
+[node name="RetryButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 673.0
+margin_right = 817.0
+margin_bottom = 67.0
+size_flags_horizontal = 6
+text = "Try Again"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+bus = "Voice"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 4 )
+anims/fade_in = SubResource( 2 )
+
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_MenuButton_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_RetryButton_button_up"]

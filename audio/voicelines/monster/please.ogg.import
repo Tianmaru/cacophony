@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/please.ogg-c5b77f0f3aae7d592840c0ed970d2690.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/please.ogg"
+dest_files=[ "res://.import/please.ogg-c5b77f0f3aae7d592840c0ed970d2690.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

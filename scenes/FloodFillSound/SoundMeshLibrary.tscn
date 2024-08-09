@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 0, 0, 1, 0.501961 )
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 1, 0, 0, 0.501961 )
+
+[node name="SoundMeshLibrary" type="Spatial"]
+
+[node name="PropagateSoundMesh" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="PlaySoundMesh" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )

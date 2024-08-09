@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/listen_to_me.ogg-9510a93e4fe8b0e8c81e55d8b4e81ffc.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/listen_to_me.ogg"
+dest_files=[ "res://.import/listen_to_me.ogg-9510a93e4fe8b0e8c81e55d8b4e81ffc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/turn_left.ogg-037030e6937f609b4e6130ad5e12bf8d.oggstr"
+
+[deps]
+
+source_file="res://audio/sfx/turn_left.ogg"
+dest_files=[ "res://.import/turn_left.ogg-037030e6937f609b4e6130ad5e12bf8d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

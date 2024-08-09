@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dont_feed.ogg-c241be67f03b754ca167653c7b2673b0.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/dont_feed.ogg"
+dest_files=[ "res://.import/dont_feed.ogg-c241be67f03b754ca167653c7b2673b0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

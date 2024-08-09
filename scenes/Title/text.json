@@ -1,0 +1,27 @@
+{
+	credits = "
+A Game by Tianmaru, made with [url=godotengine.org]Godot 3[/url].
+Originally created for [url=https://itch.io/jam/trijam-167]Trijam #167: Heightened Senses[/url].
+
+Cacophony uses the following assets:
+- [url]fonts.google.com/specimen/Amatic+SC[/url]
+- [url]opengameart.org/content/dripping-water-loop[/url]
+- [url]opengameart.org/content/loopable-dungeon-ambience[/url]
+- [url]opengameart.org/content/trembling-mists[/url]
+- [url=opengameart.org/content/foot-walking-step-sounds-on-stone-water-snow-wood-and-dirt]Step Sounds from OpenGameArt.org[/url]
+- [url]freesound.org/people/Abacagi/sounds/483397/[/url]
+- [url]opengameart.org/content/falling-rock[/url]
+
+
+...hi Lasse! :D",
+	howto =
+"Try to avoid the monster and find the exit of the labyrinth through navigating by ear. There are multiple auditory clues scattered across the level to indicate your current location. You can also call for help - maybe someone will answer?
+
+- W to move forward one grid cell
+- A to turn 90° to the left
+- D to turn 90° to the right
+- Space to call for help
+- [s]F3 to unblock the vision[/s]
+
+Have fun!",
+}

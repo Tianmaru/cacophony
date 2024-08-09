@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/coming_to_get_you.ogg-c34de7041eb14105a248f9109ee793dd.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/coming_to_get_you.ogg"
+dest_files=[ "res://.import/coming_to_get_you.ogg-c34de7041eb14105a248f9109ee793dd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

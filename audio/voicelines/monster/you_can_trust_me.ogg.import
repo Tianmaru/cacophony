@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/you_can_trust_me.ogg-119c35a805d7730b211cd9976abe7154.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/you_can_trust_me.ogg"
+dest_files=[ "res://.import/you_can_trust_me.ogg-119c35a805d7730b211cd9976abe7154.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

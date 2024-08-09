@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/it_is_here.ogg-245434d1b12d8a58277bb498731a7755.oggstr"
+
+[deps]
+
+source_file="res://audio/voicelines/monster/it_is_here.ogg"
+dest_files=[ "res://.import/it_is_here.ogg-245434d1b12d8a58277bb498731a7755.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

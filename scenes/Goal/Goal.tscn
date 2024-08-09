@@ -1,0 +1,35 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://audio/voicelines/goal/answer_can_you_hear_me.ogg" type="AudioStream" id=1]
+[ext_resource path="res://scenes/Goal/Goal.gd" type="Script" id=2]
+[ext_resource path="res://audio/voicelines/goal/answer_hello2.ogg" type="AudioStream" id=3]
+[ext_resource path="res://audio/voicelines/goal/answer_over_here.ogg" type="AudioStream" id=4]
+[ext_resource path="res://audio/voicelines/goal/answer_hello.ogg" type="AudioStream" id=5]
+[ext_resource path="res://audio/voicelines/goal/answer_watch_out.ogg" type="AudioStream" id=6]
+[ext_resource path="res://audio/voicelines/goal/answer_hurry.ogg" type="AudioStream" id=7]
+[ext_resource path="res://audio/voicelines/goal/answer_i_am_here.ogg" type="AudioStream" id=8]
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0, 0, 1, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.25, 0.25, 0.25 )
+
+[node name="Goal" type="Area" groups=["goal"]]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource( 2 )
+audio_streams = [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 1 ) ]
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 6 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="." to="." method="_on_Goal_body_entered"]

@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/NormalData.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/MyPopup/MyPopup.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="MyPopup" type="PopupDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_right = 992.0
+margin_bottom = 61.0
+text = "Warning"
+align = 1
+valign = 1
+
+[node name="Text" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 65.0
+margin_right = 992.0
+margin_bottom = 497.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "Text"
+text = "Text"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 501.0
+margin_right = 992.0
+margin_bottom = 568.0
+alignment = 1
+
+[node name="OKButton2" type="Button" parent="VBoxContainer/ButtonContainer"]
+margin_left = 473.0
+margin_right = 519.0
+margin_bottom = 67.0
+text = "OK"
+
+[connection signal="meta_clicked" from="VBoxContainer/Text" to="." method="_on_Text_meta_clicked"]
+[connection signal="button_up" from="VBoxContainer/ButtonContainer/OKButton2" to="." method="_on_confirmation_button_up"]
